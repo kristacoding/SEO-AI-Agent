@@ -1,31 +1,56 @@
-# SEO-AI-Agent
-AI‑Powered SEO Technical Workflow by Krista Meiers
-Overview
-I designed and deployed an AI‑assisted SEO technical workflow that transforms raw crawl data into high‑quality, review‑ready SEO recommendations. The goal was not to simply generate content with AI, but to embed AI into an operational process with guardrails, validation, and human oversight.
-________________________________________
-The Problem
-Large websites generate hundreds or thousands of SEO issues during audits—especially around title tags and meta descriptions (missing, too long, too short, or inconsistent).
-Traditional approaches are time‑intensive, manual, inconsistent, and difficult to scale.
-________________________________________
-The Solution
-🔗 Live Demo: https://seo-ai-agent-py.streamlit.app/  (Screaming Frog Excel and OpenAI Key Required) 
-I built an interactive AI SEO Agent that integrates crawl data, SEO best practices, and LLMs into a repeatable process.
-Process: 
-•	Ingests Screaming Frog crawl data and flags specific SEO issues 
-•	Uses OpenAI GPT‑4–class models to generate optimized titles and meta descriptions 
-•	Enforces hard SEO constraints 
-•	Requires human approval before export
-________________________________________
-Technology & Architecture
-•	LLMs: OpenAI GPT‑4–class models (with gpt‑4o‑mini used during development/testing)
-•	Backend logic: Python (pandas, validation, parsing)
-•	Interface: Streamlit (interactive review, approval, export)
-•	Deployment: Publicly deployed via Streamlit Community Cloud
-________________________________________
-Impact & Value
-This project reflects how I approach AI in professional environments: process‑first thinking, guardrails over guesswork, and scalable systems with human judgment built in. I’m excited to bring this mindset to teams looking to integrate AI into real workflows, whether in SEO, digital operations, or broader content and optimization processes.
-•	Reduces manual SEO effort while improving consistency
-•	Produces review-ready outputs aligned with SEO best practices
-•	Scales across sites, audits, and teams
-•	Demonstrates how AI can be operationalized—not just experimented with
- 
+# AI-Powered SEO Workflow
+
+This project is an **AI-assisted SEO application** that transforms Screaming Frog crawl data into review-ready SEO recommendations using large language models, validation logic, and human-in-the-loop approval.
+
+The goal of this project is not to simply generate content with AI, but to demonstrate how AI can be **embedded into a real operational workflow** with guardrails, consistency, and human oversight.
+
+---
+
+## What This App Does
+
+- Ingests Screaming Frog crawl data (CSV)
+- Filters to indexable HTML pages with a 200 status code
+- Identifies SEO issues such as missing or out-of-range title tags and meta descriptions
+- Uses OpenAI GPT-4–class models to generate optimized titles and meta descriptions
+- Enforces strict SEO constraints (character limits and formatting rules)
+- Validates AI output programmatically and regenerates when constraints are not met
+- Requires human review and approval before exporting results
+
+---
+
+## Live Demo
+
+🔗 **Streamlit App:** https://seo-ai-agent-py.streamlit.app/
+
+> Note: A Screaming Frog crawl export and an OpenAI API key are required to use the app.
+
+---
+
+## Technology Stack
+
+- **Language:** Python
+- **LLMs:** OpenAI GPT-4–class models (with `gpt-4o-mini` used during development and testing)
+- **Data Processing:** pandas
+- **UI:** Streamlit
+- **Deployment:** Streamlit Community Cloud
+
+---
+
+## Why This Matters
+
+This project reflects a process-first approach to AI:
+- AI is used as an assistant, not a replacement for expertise
+- Guardrails and validation are enforced programmatically
+- Outputs are reviewable, explainable, and scalable
+
+The same architectural approach can be applied to other digital workflows where consistency, quality, and scale are required.
+
+---
+
+## Getting Started Locally
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
